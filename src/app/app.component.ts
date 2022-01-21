@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Task } from './task';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public config: { [key: string]: string } | null = null;
+  config: { [key: string]: string } | null = null;
+  tasks: Task[] = [
+    {
+      name: 'Workout',
+      deadline: '2022-01-21',
+      done: false
+    },
+    {
+      name: 'Learning Angular',
+      deadline: '2022-01-21',
+      done: false
+    },
+    {
+      name: 'Meditate',
+      deadline: '2022-01-21',
+      done: false
+    }
+  ];
 
   constructor(){
     setTimeout(() => {
