@@ -35,4 +35,17 @@ export class AppComponent {
       };
     }, 500);
   }
+
+  clearTasks(){
+    this.tasks = [];
+  }
+
+  createTask(name: string, deadline: string){
+    const task: Task = {
+      name,
+      deadline,
+      done: false
+    };
+    this.tasks.push(task);
+  }
 }
